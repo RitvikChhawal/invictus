@@ -1,139 +1,109 @@
 import { makeStyles } from '@material-ui/core';
-import logo from '../../Assets/invictus_logo.png'
-
+import footer_bg from '../../Assets/Backgrounds/footer_bg.png'
 export const useStyles = makeStyles({
-  root: {
+  root:{
     width: '100%',
-    height: '290px',
-    background: '#F8F8F8',
-    position: 'relative',
-    '@media (max-width:599px)': {
-      height: '260px',
-      background: '#FFFFFF',
-      borderRadius: '40px 40px 0px 0px',
-    },
+    height: '30vh',
+    background: '#642A7F',
+    '@media (max-width:599px)': //mobile screens
+    {
+      height: '20vh',
+    }
   },
-  logoContainer: {
-    background: `url(${logo}) no-repeat`,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    '@media (max-width:599px)': {
-      position: 'absolute',
-      bottom: '35px',
-      left: '15%',
-    },
-    '@media (max-width:374px)': {
-      left: '12%',
-    },
-    '@media (max-width:320px)': {
-      left: '5%',
-    },
+  footer: {
+    background: `url(${footer_bg}) no-repeat`,
+    backgroundSize: 'cover',
   },
-  logo: {
-    width: '240px',
-    paddingBottom: '5px',
-    '@media (max-width:768px)': {
-      width: '180px',
-    },
-    '@media (max-width:599px)': {
-      width: '130px',
-    },
-  },
-  subtext: {
-    color: '#929292',
-    fontFamily: 'Montserrat',
+  subtext: {//web view
+    color: '#081261',
+    fontFamily: 'Rajdhani',
     fontStyle: 'normal',
-    fontWeight: 500,
-    fontSize: '1rem',
+    fontWeight: 'bold',
+    fontSize: '1.2rem',
     lineHeight: '1.2rem',
-    '@media (max-width:768px)': {
-      fontSize: '0.6rem',
+    '@media (max-width:768px)': {//tablet view
+      fontSize: '1rem',
     },
-    '@media (max-width:599px)': {
-      fontSize: '11px',
+    '@media (max-width:599px)': {//mobile view
+      fontSize: '0.8rem',
       lineHeight: '13px',
     },
   },
-  emailLink: {
-    color: '#FF767C',
-  },
   helpCenterContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    paddingTop: '120px',
     '& .MuiBox-root:nth-child(2)': {
         paddingTop: '19px',
       },
     '@media (max-width:599px)': {
-      position: 'absolute',
-      bottom: '138px',
-      left: '15%',
+      
     },
     '@media (max-width:374px)': {
-      left: '12%',
+     
     },
     '@media (max-width:320px)': {
-      left: '5%',
+      
     },
   },
   help: {
-    padding: '1px 4px',
+    padding: '3px 4px',
   },
   header: {
-    paddingTop: '48px',
-    fontFamily: 'Montserrat',
+    paddingTop: '50px',
+    letterSpacing: '0.05em',
+    fontFamily: 'Rajdhani',
     fontStyle: 'normal',
-    fontWeight: 'bold',
-    fontSize: '1.5rem',
-    color: '#737373',
+    fontWeight: 700,
+    fontSize: '1.7rem',
+    color: '#081261',
     '@media (max-width:768px)': {
-      fontSize: '1rem',
+      fontSize: '1.5rem',
     },
     '@media (max-width:599px)': {
-      fontSize: '18px',
+      fontSize: '1rem',
       lineHeight: '20px',
       padding: 0,
     },
   },
   sitemap: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingTop: '120px',
     '& .MuiBox-root:nth-child(2)': {
       paddingTop: '18px',
     },
     '@media (max-width:599px)': {
-      position: 'absolute',
-      bottom: '120px',
-      right: '15%',
-    },
-    '@media (max-width:374px)': {
-      right: '12%',
-    },
-    '@media (max-width:320px)': {
-      right: '5%',
     },
   },
   section: {
-    padding: '9px 4px',
+    padding: '3px 4px',
     '@media (max-width:599px)': {
-      padding: '5px 4px',
+      padding: '2px 4px',
     },
   },
   findus: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: '120px 0px 0px 0px',
     '@media (max-width:599px)': {
-      position: 'absolute',
-      bottom: '32px',
-      right: '15%',
     },
     '@media (max-width:374px)': {
-      right: '12%',
+     
     },
     '@media (max-width:320px)': {
-      right: '5%',
+     
     },
   },
   socialLinksContainer: {
     display: 'flex',
     padding: '20px 15px',
     '@media (max-width:599px)': {
-      padding: '0',
+      paddingTop: '20',
+      flexDirection: 'column',
     },
   },
   iconsContainer: {
@@ -141,4 +111,25 @@ export const useStyles = makeStyles({
       display: 'flex',
     },
   },
+  findusLink: {
+    color:'#081261',
+    cursor: 'pointer',
+    height: '40px',
+    width: '40px',
+    "&:hover": {
+      color: "white"
+    },
+    '@media (max-width:599px)': {
+    height: '20px',
+    width: '20px',
+    }
+  },
+  sitemapLink: {
+    color:'#081261',
+    cursor: 'pointer',
+    textDecoration: 'none',
+    "&:hover": {
+      color: "white"
+    }
+  }
 });

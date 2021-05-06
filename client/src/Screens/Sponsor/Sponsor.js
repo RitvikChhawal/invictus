@@ -1,15 +1,16 @@
 import React from 'react'
 import Container from '@material-ui/core/Container';
-import { Link } from 'react-router-dom';
-import Hero from '../Components/Hero/Hero'
-const Home = () => {
+import Hero from '../../Components/Hero/Hero'
+import Details from './Details'
+
+const Sponsor = () => {
     return (
         <React.Fragment>
-            <Container>
+            <Details>
                 <Hero />
-            </Container>
+            </Details>
         </React.Fragment>
     )
 }
 
-export default Home
+export default Sponsor
