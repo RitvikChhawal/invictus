@@ -8,14 +8,14 @@ import {  Link } from "react-router-dom";
 
 export default function Navbar(props) {
   const classes = useStyles();
-  const trigger = useScrollTrigger();
+  const trigger = useScrollTrigger({threshold:0});
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
       <AppBar className={classes.navbar} elevation={0}>
         <Toolbar>
 
-          <div className = {classes.title}>
+          <div>
             <Link to="/">
 
               <img 
@@ -25,14 +25,20 @@ export default function Navbar(props) {
 
             </Link>
           </div>
+
+          <div className = {classes.title}></div>
           
           <Fade in={!props.isOpen}>
             <div>
-              <Button 
-                className = {classes.register}
-              >
-                REGISTER NOW
-              </Button>
+              <Link to='/events' style={{ textDecoration: 'none' }}>
+
+                <Button 
+                  className = {classes.register}
+                  href="/events"
+                >
+                  REGISTER NOW
+                </Button>
+              </Link>
 
               <IconButton 
                 className = {classes.iconButton}

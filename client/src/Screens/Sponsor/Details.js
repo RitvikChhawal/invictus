@@ -1,26 +1,13 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
 import SponsorData from './SponsorData'
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -29,7 +16,9 @@ const useStyles = makeStyles(theme => ({
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(16, 0, 6),
-    color: '#ffffff'
+    color: '#ffffff',
+    fontFamily: 'Rajdhani',
+    fontStyle: 'normal',
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -49,10 +38,7 @@ const useStyles = makeStyles(theme => ({
   cardContent: {
     flexGrow: 1,
   },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
+
 }));
 
 
@@ -66,8 +52,8 @@ export default function Album(props) {
         {/* Hero unit */}
         <div className={classes.heroContent} 
         style={{backgroundColor:"transparent", position:"relative"}}>
-          <Container maxWidth="xs">
-            <Typography component="h1" variant="h2" align="center" color="white" gutterBottom>
+          <Container maxWidth="md">
+            <Typography component="h2" variant="h2" align="center" color="white" gutterBottom>
               Sponsor Us
             </Typography>
             <Typography variant="h5" align="center"  paragraph>

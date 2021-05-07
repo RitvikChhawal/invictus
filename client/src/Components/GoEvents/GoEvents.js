@@ -2,7 +2,6 @@ import React from 'react'
 import './GoEvents.css'
 import { makeStyles } from '@material-ui/core'
 import Box from '@material-ui/core/Box';
-import glimpse_events_bg from '../../Assets/Backgrounds/glimpse_events_bg.jpg'
 
 const useStyles= makeStyles({
     root:{
@@ -19,7 +18,7 @@ const useStyles= makeStyles({
     fontFamily: 'Rajdhani',
     fontStyle: 'normal',
     fontWeight: 'bold',
-    }
+    },
 })
 
 const GoEvents = () => {
